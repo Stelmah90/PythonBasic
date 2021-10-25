@@ -10,3 +10,5 @@ income = float(revenue) - taxes
 rule = bool(int(input('Вы резидент? 1/0 ')))
 print('Ваша прибыль за месяц {} составляет: {}'.format('с вычитом налогов' if rule else '',
                                                        income if rule else revenue))
+
+print('test')
