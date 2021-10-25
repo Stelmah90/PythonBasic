@@ -1,14 +1,3 @@
-description = 'Это тестовое задание задание номер '
-task_num = 1
-print(description, task_num)
-name = input('Введите ваше имя: ')
-last_name = input('Введите вашу фамилию: ')
-print('Здравствуйте', name, last_name, '!')
-revenue = input('Сколько вы заработали за последний месяц? ')
-taxes = float(revenue) * 0.18
-income = float(revenue) - taxes
-rule = bool(int(input('Вы резидент? 1/0 ')))
-print('Ваша прибыль за месяц {} составляет: {}'.format('с вычитом налогов' if rule else '',
-                                                       income if rule else revenue))
-
-print('test')
+task_list = [1, 123.12, 'test', (1, 2, 3), {1, 2, 3}, {'key_1': 'val_1', 'key_2': 'val_2'}, [1, 2, 3], bytes(12), None]
+for element in task_list:
+    print(type(element))
