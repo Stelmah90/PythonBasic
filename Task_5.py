@@ -1,13 +1,10 @@
-revenue = float(input('Выручка = '))
-costs = float(input('Издержки = '))
-income = revenue - costs
-if income > 0:
-    efficiency = income / revenue
-    print('Прибыль = ', income, 'Рентабельность = ', efficiency)
-    workforce = int(input('Численность сотрудников = '))
-    if workforce <= 0:
-        print('Предприятия без сотрудников не бывает')
+while True:
+    my_list = [7, 5, 3, 3, 2]
+    user_num = input('Введите натуральное число: ')
+    if user_num.isdigit() and int(user_num) != 0:
+        my_list.append(int(user_num))
+        my_list.sort(reverse=True)
+        print(my_list)
+        break
     else:
-        print('Прибыль в расчете на одного сотрудника = ', income/workforce)
-else:
-    print('Предприятие убыточное')
+        print('Некорректные данные')
