@@ -9,7 +9,7 @@ def num_str(string):
 
 res_sum = 0
 while True:
-    us_str = input('Введите числа через пробел: ')
+    us_str = input('Введите числа через пробел, чтобы закончить введите "!": ')
     if us_str == '!':
         print(res_sum)
         break
