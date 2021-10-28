@@ -1,11 +1,21 @@
-while True:
-    month = input('Введите месяц от 1 до 12: ')
-    if month.isdecimal() and 0 < int(month) < 13:
-        calendar = {'Зима': [12, 1, 2], 'Весна': [3, 4, 5], 'Лето': [6, 7, 8], 'Осень': [9, 10, 11]}
-        for key, val in calendar.items():
-            if int(month) in val:
-                print(key)
-                break
-        break
-    else:
-        print('Вы ввели некоорректные данные')
+def is_number(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
+
+
+def my_func(var1, var2, var3):
+    var_list = [float(var1), float(var2), float(var3)]
+    var_list.remove(min(var_list))
+    return sum(var_list)
+
+
+a = input('a = ')
+b = input('b = ')
+c = input('c = ')
+if is_number(a) and is_number(b) and is_number(c) is True:
+    print(my_func(a, b, c))
+else:
+    print('Некорректные данные')

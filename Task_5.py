@@ -1,10 +1,18 @@
+def num_str(string):
+    f_res_sum = 0
+    res_string = string.split(' ')
+    for el in res_string:
+        if el.isdigit():
+            f_res_sum += float(el)
+    return f_res_sum
+
+
+res_sum = 0
 while True:
-    my_list = [7, 5, 3, 3, 2]
-    user_num = input('Введите натуральное число: ')
-    if user_num.isdigit() and int(user_num) != 0:
-        my_list.append(int(user_num))
-        my_list.sort(reverse=True)
-        print(my_list)
+    us_str = input('Введите числа через пробел: ')
+    if us_str == '!':
+        print(res_sum)
         break
     else:
-        print('Некорректные данные')
+        res_sum += num_str(us_str)
+        print(res_sum)
