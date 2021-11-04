@@ -1,9 +1,18 @@
-def int_func(string):
-    return string.title()
+from itertools import count, cycle
 
 
-us_str = input('Введите латинские слова через пробел: ')
-if us_str.isascii() and us_str.isascii() and us_str.islower() is False:
-    print('Неверные данные')
-else:
-    print(int_func(us_str))
+print('Генерим целые числа, начиная с указанного с каждым нажатием Enter. Для выхода жми "!"')
+for number in count(int(input('Введи первое число: '))):
+    print(number, end='')
+    ext = input()
+    if ext == '!':
+        break
+
+print('Повторяем элементы списка. Генерим каждое повторение кнокпой "Enter". Для выхода жми"!"')
+user_list = input('Введи список чего-нибудь через пробел: ').split()
+iter_ = cycle(user_list)
+ext = None
+
+while ext != '!':
+    print(next(iter_), end='')
+    ext = input()

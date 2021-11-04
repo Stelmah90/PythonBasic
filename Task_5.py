@@ -1,18 +1,12 @@
-def num_str(string):
-    f_res_sum = 0
-    res_string = string.split(' ')
-    for el in res_string:
-        if el.isdigit():
-            f_res_sum += float(el)
-    return f_res_sum
-
-
-res_sum = 0
-while True:
-    us_str = input('Введите числа через пробел, чтобы закончить введите "!": ')
-    if us_str == '!':
-        print(res_sum)
-        break
-    else:
-        res_sum += num_str(us_str)
-        print(res_sum)
+from functools import reduce
+#
+#
+# def mul_list(num1, num2):
+#     return num1 * num2
+#
+#
+# task_list = [num for num in range(100, 1001, 2)]
+# print(f"Списк четных чисел\n{task_list}\nПроизведение чисел списка\n{reduce(mul_list, task_list)}")
+#
+#
+print(reduce(lambda a, b: a * b, [x for x in range(100, 1001, 2)]))
