@@ -1,22 +1,12 @@
-def is_number(string):
+from sys import argv
+
+
+def payment():
     try:
-        float(string)
-        return True
+        time, rate, bonus = map(float, argv[1:])
+        print(f"Payment - {time * rate + bonus}")
     except ValueError:
-        return False
+        print("Введите значения 'Выработка в часах', 'Ставка в час', 'Премия' числом через пробел")
 
 
-def division(var_1, var_2):
-    try:
-        res = float(var_1) / float(var_2)
-        return res
-    except ZeroDivisionError:
-        return print('Нельзя делить на ноль')
-
-
-a = input('a = ')
-b = input('b = ')
-if is_number(a) and is_number(b) is True:
-    print(division(a, b))
-else:
-    print('Вы ввели не число')
+payment()
