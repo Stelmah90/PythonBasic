@@ -1,13 +1,5 @@
-revenue = float(input('Выручка = '))
-costs = float(input('Издержки = '))
-income = revenue - costs
-if income > 0:
-    efficiency = income / revenue
-    print('Прибыль = ', income, 'Рентабельность = ', efficiency)
-    workforce = int(input('Численность сотрудников = '))
-    if workforce <= 0:
-        print('Предприятия без сотрудников не бывает')
-    else:
-        print('Прибыль в расчете на одного сотрудника = ', income/workforce)
-else:
-    print('Предприятие убыточное')
+from random import randint
+with open('task_5.txt', mode='w+', encoding='utf-8') as file:
+    file.write(" ".join([str(randint(1, 100)) for _ in range(10000)]))
+    file.seek(0)
+    print(sum(map(int, file.readline().split())))

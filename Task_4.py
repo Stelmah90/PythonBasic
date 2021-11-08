@@ -1,14 +1,4 @@
-while True:
-    n = int(input('Введите положительно число: '))
-    if n < 0:
-        print('Число отрицательное')
-    else:
-        res = 0
-        while n > 1:
-            div_n = n % 10
-            n //= 10
-            if div_n > res:
-                res = div_n
-        print('Самая большая цифра: ', res)
-        break
-
+rus_numbers = {"One": "Один", "Two": "Два", "Three": "Три", "Four": "Четыре"}
+with open('task_4_m.txt', 'w', encoding='utf-8') as nf:
+    with open('task_4.txt', 'r', encoding='utf-8') as mf:
+        nf.write(str([line.replace(line.split()[0], rus_numbers.get(line.split()[0])) for line in mf]))

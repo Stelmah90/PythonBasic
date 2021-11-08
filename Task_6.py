@@ -1,12 +1,7 @@
-while True:
-    dist = float(input('Дистанция пробежки в первый день: '))
-    if dist < 0:
-        print('Дистанция пробежки не может быть меньше 0')
-    else:
-        des_dist = float(input('Желаемая дистанция ежедневной пробежки: '))
-        day_count = 1
-        while dist < des_dist:
-            dist = dist + dist * 0.1
-            day_count += 1
-        print('На день ', day_count, 'спортсмен достиг резеультата не менее', des_dist)
-        break
+dict = {}
+with open('task_6.txt', encoding='utf-8') as file:
+    for line in file:
+        obj, stats = line.split('-')
+        elem = [ch for ch in stats if ch == ' ' or ('0' <= ch <= '9')]
+        print(elem)
+        obj_sum = sum(map(int, ""))
