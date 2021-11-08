@@ -1,0 +1,5 @@
+Ivanov 40000
+Sidorov 30000
+Petrov 21000
+Karpov 15000
+Okunyev 10000
